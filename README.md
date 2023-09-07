@@ -2,9 +2,9 @@
 
 ## Getting Started
 
-This repo contains a Node and Express app for Storefront Backend API.
+This repo contains Storefront Backend API.
 
-- To get this project, type `git clone https://github.com/cheerworld/API_with_Postgres_Express_Project.git` in your terminal and `cd api-with-postgresql-and-express-project` to get into your project. This project is running on port 3000.
+- To get this project, type `git clone https://github.com/NguyenCongAnh1/Build-A-Storefront-Backend.git`, you can run cmd `npm run start` to start server.This project is running on port 3000.
 
 To get started developing:
 
@@ -16,9 +16,9 @@ To get started developing:
   - Create 2 databases in your postgres SQL Shell, 1 for development, 1 for testing. `CREATE DATABASE full_stack_dev;`
   - `\c full_stack_dev`
   - `GRANT ALL PRIVILEGES ON DATABASE full_stack_dev TO full_stack_user;`
-  - `CREATE DATABASE full_stack_dev_test;`
-  - `\c full_stack_dev_test`
-  - `GRANT ALL PRIVILEGES ON DATABASE full_stack_dev_test TO full_stack_user;`
+  - `CREATE DATABASE fantasy_worlds_test;`
+  - `\c fantasy_worlds_test`
+  - `GRANT ALL PRIVILEGES ON DATABASE fantasy_worlds_test TO full_stack_user;`
   - To test that it is working run `\dt` and it should output "No relations found."
 
   In terminal
