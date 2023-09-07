@@ -44,8 +44,6 @@ describe('Test for dashboard', () => {
 
 
         await orderStore.create({
-            productId: '1',
-            quantity: 20,
             userId: '1',
             status: 'complete'
 
@@ -53,42 +51,37 @@ describe('Test for dashboard', () => {
 
         
         await orderStore.create({
-            productId: '2',
-            quantity: 30,
             userId: '1',
             status: 'complete'
 
         })
 
         await orderStore.create({
-            productId: '3',
-            quantity: 70,
             userId: '1',
             status: 'active'
 
         })
 
         await orderStore.create({
-            productId: '4',
-            quantity: 40,
             userId: '1',
             status: 'complete'
 
         })
         await orderStore.create({
-            productId: '5',
-            quantity: 100,
             userId: '1',
             status: 'complete'
 
         })
 
+        await orderStore.addProduct(20, '1','1');
+        await orderStore.addProduct(50, '1','2');
+        await orderStore.addProduct(100, '1','3');
+        await orderStore.addProduct(45, '1','4');
+        await orderStore.addProduct(200, '1','5');
     })
 
-
     afterAll(async () => {
-        const sql =`DELETE FROM orders; 
-                    ALTER SEQUENCE orders_id_seq RESTART WITH 1; 
+        const sql =`DELETE FROM order_products; ALTER SEQUENCE order_products_id_seq RESTART WITH 1; 
                     DELETE FROM orders; ALTER SEQUENCE orders_id_seq RESTART WITH 1; 
                     DELETE FROM users; ALTER SEQUENCE users_id_seq RESTART WITH 1; 
                     DELETE FROM products;  ALTER SEQUENCE products_id_seq RESTART WITH 1;`
@@ -107,7 +100,7 @@ describe('Test for dashboard', () => {
         expect(result[0]).toEqual(jasmine.objectContaining({
             name: 'product5', 
             price: '5.99', 
-            total_quantity: '100' 
+            total_quantity: '200' 
         }));
     })
 

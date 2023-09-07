@@ -4,7 +4,7 @@
 
 This repo contains Storefront Backend API.
 
-- To get this project, type `git clone https://github.com/NguyenCongAnh1/Build-A-Storefront-Backend.git`, you can run cmd `npm run start` to start server.This project is running on port 3000.
+- To get this project, type `git clone https://github.com/NguyenCongAnh1/Build-A-Storefront-Backend.git`, you can run cmd `npm run start` to start the project.This project is running on port 3000.
 
 To get started developing:
 
@@ -54,6 +54,7 @@ This application has the following libraries:
 - POSTGRES_USER=full_stack_user
 - POSTGRES_PASSWORD=password123
 - POSTGRES_TEST_DB=fantasy_worlds_test
+- ENV=dev
 - BCRYPT_PASSWORD=lalalala_hahahah
 - SALT_ROUNDS=10
 - TOKEN_SECRET=lalalalalala@123!
