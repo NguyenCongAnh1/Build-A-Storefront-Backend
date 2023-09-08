@@ -45,7 +45,7 @@ This application has the following libraries:
 - bcrypt from npm for hashing passwords
 - body-parser extracts the entire body portion of an incoming request stream and exposes it on req.body.
 - nodemon is a tool that helps automatically restart the node application when file changes in the directory are detected.
-  
+- supertest for endpoint testing
 
 ## Environment Variables
 

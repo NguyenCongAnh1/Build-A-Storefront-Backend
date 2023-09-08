@@ -8,10 +8,9 @@ const verifyAuthToken = (req: Request, res: Response, next: NextFunction) => {
         const authorizationHeader = req.headers.authorization!
         const token = authorizationHeader.split(' ')[1]
         const decoded = jwt.verify(token, process.env.TOKEN_SECRET!)
-
         next()
     } catch (error) {
-        res.status(401)
+        res.status(401).send({ error: 'Unauthorized' });
     }
 }
 

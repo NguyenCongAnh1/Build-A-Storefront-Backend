@@ -48,12 +48,16 @@ These are the notes from a meeting with the frontend developer that describe wha
 | Columns   | Types                                |
 | --------- | ------------------------------------ |
 | id        | SERIAL PRIMARY KEY                   |
-| product_id| bigint REFERENCES products(id)       |
-| quantity  | INTEGER NOT NULL                     |
 | user_id   | bigint REFERENCES users(id)          |
 | status    | VARCHAR                              |
 
+#### order_products table
 
-
+| Columns    | Types                                |
+| ---------- | ------------------------------------ |
+| id         | SERIAL PRIMARY KEY                   |
+| quantity   | integer                              |
+| order_id   | bigint REFERENCES orders(id)         |
+| product_id | bigint REFERENCES products(id)       |
 
 
