@@ -58,6 +58,7 @@ This application has the following libraries:
 - BCRYPT_PASSWORD=lalalala_hahahah
 - SALT_ROUNDS=10
 - TOKEN_SECRET=lalalalalala@123!
+- TOKEN_TEST=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJmaXJzdF9uYW1lIjoiQWxpY2UiLCJsYXN0X25hbWUiOiJKb2huc29uIiwicGFzc3dvcmRfZGlnZXN0IjoiJDJiJDEwJHhTWDR3Z1lXWHhDYVRhS0JYUXhZMS5EOGprV20ySVBmUk5sbWRoRWNsa0xBQWF1Y0ZhcE5DIn0sImlhdCI6MTY5MzkyNTQ3OH0.uske3kXfhh3RgUCXn7gS8glewJo9Ar3mJmOFVBFGamA
 
 ## More Information
 

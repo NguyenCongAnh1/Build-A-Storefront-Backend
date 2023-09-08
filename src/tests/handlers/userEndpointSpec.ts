@@ -6,13 +6,12 @@ const request = supertest(app);
 const token = process.env.TOKEN_TEST!;
 describe("User Endpoints", () => {
 
-    fit('Test /users POST route ', async () => {
+    it('Test /users POST route ', async () => {
         const user = {
             "firstName": "Anh",
             "lastName": "Nguyen",
             "password": "kakakakakakakaka"
         };
-
         await request.post('/users')
             .auth(`${token}`, { type: 'bearer' })
             .send(user)
@@ -20,7 +19,6 @@ describe("User Endpoints", () => {
             .then(async (res: any) => {
                 expect(res.body).toBeTruthy;
             })
-            
     });
 
     it('Test /users GET route ', async () => {
@@ -32,7 +30,6 @@ describe("User Endpoints", () => {
             .then(async (res: any) => {
                 expect(res.body).toBeTruthy;
             })
-            
     });
     
     it('Test /users/:id GET route ', async () => {
