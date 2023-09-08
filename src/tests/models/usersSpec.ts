@@ -1,9 +1,20 @@
 import { User, UserStore } from "../../models/users";
-
+// @ts-ignore
+import Client from '../../database'
 
 const store = new UserStore();
 
 describe('Test for users model', () => {
+
+    afterAll(async () => {
+        const sql = `DELETE FROM order_products; ALTER SEQUENCE order_products_id_seq RESTART WITH 1; 
+                    DELETE FROM orders; ALTER SEQUENCE orders_id_seq RESTART WITH 1; 
+                    DELETE FROM users; ALTER SEQUENCE users_id_seq RESTART WITH 1; 
+                    DELETE FROM products;  ALTER SEQUENCE products_id_seq RESTART WITH 1;`
+        const conn = await Client.connect();
+        await conn.query(sql);
+        conn.release();
+    })
 
     it('should have an index method', () => {
         expect(store.index).toBeDefined();
